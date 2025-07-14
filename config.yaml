@@ -1,0 +1,113 @@
+# Super AI Agent Configuration
+agent:
+  name: "SuperEmailAgent"
+  version: "1.0.0"
+  debug: false
+  max_concurrent_emails: 5
+  processing_timeout: 300  # seconds
+  confidence_threshold: 0.85
+  auto_approve_threshold: 0.95
+
+# Email Configuration
+email:
+  imap:
+    server: "imap.gmail.com"
+    port: 993
+    use_ssl: true
+    folder: "INBOX"
+    check_interval: 60  # seconds
+    max_emails_per_check: 10
+  
+  smtp:
+    server: "smtp.gmail.com"
+    port: 587
+    use_tls: true
+    timeout: 30
+
+# AI Configuration
+ai:
+  model: "gpt-4o"
+  max_tokens: 2000
+  temperature: 0.7
+  system_prompt: |
+    Du bist ein professioneller E-Mail-Assistent. Analysiere E-Mails sorgfältig und erstelle 
+    angemessene, höfliche und hilfreiche Antworten. Berücksichtige den Ton, die Stimmung 
+    und den Kontext der ursprünglichen Nachricht.
+  
+  analysis_prompt: |
+    Analysiere diese E-Mail und gib folgende Informationen zurück:
+    - Kategorie (Frage, Beschwerde, Bestellung, etc.)
+    - Dringlichkeit (1-10)
+    - Stimmung (positiv, neutral, negativ)
+    - Sprache
+    - Schlüsselfragen/Aufgaben
+    - Empfohlene Antwortstrategie
+
+# Telegram Configuration
+telegram:
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+  chat_id: "${TELEGRAM_CHAT_ID}"
+  approval_timeout: 300  # seconds
+  message_format: "markdown"
+  
+  # Message templates
+  templates:
+    approval_request: |
+      📧 **Neue E-Mail zur Freigabe**
+      
+      **Von:** {sender}
+      **Betreff:** {subject}
+      **Kategorie:** {category}
+      **Dringlichkeit:** {urgency}/10
+      **Vertrauen:** {confidence}%
+      
+      **Inhalt:**
+      {content_preview}
+      
+      **Vorgeschlagene Antwort:**
+      {response_preview}
+      
+      **Aktionen:**
+      /approve_{id} - Genehmigen
+      /reject_{id} - Ablehnen
+      /edit_{id} - Bearbeiten
+      /ignore_{id} - Ignorieren
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/super_agent.log"
+  max_size: "10MB"
+  backup_count: 5
+  
+  # Performance monitoring
+  metrics:
+    enabled: true
+    interval: 60  # seconds
+    track_response_times: true
+    track_confidence_scores: true
+
+# Security & Privacy
+security:
+  encrypt_sensitive_data: true
+  data_retention_days: 30
+  max_email_size: "10MB"
+  allowed_senders: []  # Empty = all allowed
+  blocked_senders: []
+  
+# Performance Optimization
+performance:
+  cache_responses: true
+  cache_ttl: 3600  # seconds
+  batch_processing: true
+  max_batch_size: 5
+  retry_attempts: 3
+  retry_delay: 5  # seconds
+
+# Language Support
+languages:
+  default: "de"
+  supported: ["de", "en", "fr", "es"]
+  auto_detect: true
+  fallback: "en"
