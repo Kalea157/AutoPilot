@@ -1,0 +1,68 @@
+# Super-KI-Agent Konfiguration
+email:
+  imap:
+    server: "imap.gmail.com"
+    port: 993
+    use_ssl: true
+  smtp:
+    server: "smtp.gmail.com"
+    port: 587
+    use_tls: true
+  fetch_interval: 30  # Sekunden
+  max_emails_per_fetch: 10
+  auto_delete_processed: false
+
+ai:
+  model: "gpt-4o"
+  max_tokens: 2000
+  temperature: 0.7
+  confidence_thresholds:
+    auto_approve: 0.95
+    auto_reject: 0.3
+    require_human: 0.7
+  analysis_prompts:
+    content_analysis: |
+      Analysiere diese E-Mail und extrahiere:
+      1. Hauptthema und Kategorie
+      2. Stimmung und Ton (formal/informal, freundlich/aggressiv)
+      3. Sprache (DE/EN/FR/ES)
+      4. Dringlichkeit (hoch/mittel/niedrig)
+      5. Erforderte Aktion
+      6. Schlüsselfragen oder -anliegen
+      7. Confidence-Level (0.0-1.0)
+    response_generation: |
+      Erstelle eine professionelle, freundliche Antwort auf diese E-Mail.
+      Berücksichtige den Ton und die Sprache der ursprünglichen E-Mail.
+      Sei hilfsbereit, klar und lösungsorientiert.
+
+telegram:
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+  admin_chat_id: "${TELEGRAM_ADMIN_CHAT_ID}"
+  notification_chat_id: "${TELEGRAM_NOTIFICATION_CHAT_ID}"
+  auto_approve_commands: ["ja", "yes", "ok", "approve"]
+  reject_commands: ["nein", "no", "reject"]
+  edit_commands: ["bearbeiten", "edit", "change"]
+  timeout_seconds: 300
+
+logging:
+  level: "INFO"
+  file: "logs/super_agent.log"
+  max_size_mb: 10
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+features:
+  auto_categorization: true
+  priority_detection: true
+  multilingual_support: true
+  sentiment_analysis: true
+  auto_archiving: true
+  smart_filtering: true
+  response_templates: true
+  escalation_rules: true
+
+security:
+  encrypt_sensitive_data: true
+  max_retry_attempts: 3
+  rate_limiting: true
+  suspicious_content_detection: true

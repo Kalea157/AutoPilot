@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  super-ki-agent:
+    build: .
+    container_name: super-ki-agent
+    restart: unless-stopped
+    environment:
+      # E-Mail Konfiguration
+      - EMAIL_ADDRESS=${EMAIL_ADDRESS}
+      - EMAIL_PASSWORD=${EMAIL_PASSWORD}
+      
+      # OpenAI API
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      
+      # Telegram Bot
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_ADMIN_CHAT_ID=${TELEGRAM_ADMIN_CHAT_ID}
+      - TELEGRAM_NOTIFICATION_CHAT_ID=${TELEGRAM_NOTIFICATION_CHAT_ID}
+      
+      # System Konfiguration
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - DEBUG_MODE=${DEBUG_MODE:-false}
+      - ENVIRONMENT=${ENVIRONMENT:-production}
+    
+    volumes:
+      # Persistente Logs
+      - ./logs:/app/logs
+      
+      # Konfigurationsdateien (optional)
+      - ./config.yaml:/app/config.yaml:ro
+      - ./.env:/app/.env:ro
+    
+    networks:
+      - super-ki-network
+    
+    # Health Check
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  super-ki-network:
+    driver: bridge
