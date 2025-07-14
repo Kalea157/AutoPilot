@@ -1,0 +1,53 @@
+# E-Mail Agent System Konfiguration
+
+# E-Mail IMAP Einstellungen
+email:
+  imap:
+    server: "imap.gmail.com"  # oder imap.web.de, imap.office365.com
+    port: 993
+    username: "your-email@gmail.com"
+    password: "your-app-password"  # App-Passwort für Gmail
+    folder: "INBOX"
+  
+  smtp:
+    server: "smtp.gmail.com"  # oder smtp.web.de, smtp.office365.com
+    port: 587
+    username: "your-email@gmail.com"
+    password: "your-app-password"
+    use_tls: true
+
+# Telegram Bot Einstellungen
+telegram:
+  bot_token: "YOUR_BOT_TOKEN_HERE"
+  user_id: "YOUR_TELEGRAM_USER_ID"  # Nur diese ID darf antworten
+  timeout: 1800  # 30 Minuten Timeout für Antworten
+
+# OpenAI API Einstellungen
+openai:
+  api_key: "YOUR_OPENAI_API_KEY"
+  model: "gpt-4o"
+  max_tokens: 1000
+  temperature: 0.7
+
+# System Einstellungen
+system:
+  check_interval: 300  # 5 Minuten zwischen Checks
+  max_processing_time: 1800  # 30 Minuten max Verarbeitungszeit
+  log_level: "INFO"
+  log_file: "email_agent.log"
+  
+# Antwort-Templates
+templates:
+  telegram_message: |
+    📧 Neue E-Mail erhalten:
+    
+    Von: {sender}
+    Betreff: {subject}
+    
+    Inhalt:
+    {content_preview}
+    
+    Generierte Antwort:
+    {generated_response}
+    
+    Antwort mit "JA" zum Senden oder "NEIN" zum Verwerfen.
