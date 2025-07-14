@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professionelle Reinigungsdienstleistungen in Münster - Dachreinigung, Fassadenreinigung, Terrassenreinigung und mehr. Express-Termine in 48h möglich.">
+    <meta name="keywords" content="Reinigung Münster, Dachreinigung, Fassadenreinigung, Terrassenreinigung, Graffitientfernung, Bauendreinigung">
+    <title>Münster Reinigung - Professionelle Reinigungsdienstleistungen</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
+               <a href="datenschutz.html">Mehr erfahren</a>
+            </p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn btn-primary">Akzeptieren</button>
+                <button id="decline-cookies" class="btn btn-secondary">Ablehnen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/logo.svg" alt="Münster Reinigung Logo" class="logo">
+                    <span class="logo-text">Münster Reinigung</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Dienstleistungen</a>
+                    <a href="#about" class="nav-link">Über uns</a>
+                    <a href="#reviews" class="nav-link">Bewertungen</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </div>
+                
+                <div class="nav-contact">
+                    <a href="tel:+49123456789" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span>0123 456789</span>
+                    </a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">
+                    Professionelle Reinigungsdienstleistungen<br>
+                    <span class="highlight">in Münster</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Ihr lokaler Partner für alle Reinigungsarbeiten - von Dachreinigung bis Bauendreinigung.<br>
+                    Express-Termine in 48h möglich!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Jetzt anfragen
+                    </a>
+                    <a href="#services" class="btn btn-secondary btn-large">
+                        <i class="fas fa-info-circle"></i>
+                        Dienstleistungen
+                    </a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Express in 48h</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Versichert & sicher</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <span>Umweltfreundlich</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lokal in Münster</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Unsere Dienstleistungen</h2>
+                <p class="section-subtitle">Professionelle Reinigungslösungen für jeden Bedarf</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Dachreinigung -->
+                <div class="service-card" data-service="dachreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/dachreinigung.svg" alt="Dachreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Dachreinigung</h3>
+                        <p>Professionelle Entfernung von Moos, Algen und Flechten. Vorbereitung für Dachbeschichtung.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Moos & Algen entfernen</li>
+                            <li><i class="fas fa-check"></i> Flechten beseitigen</li>
+                            <li><i class="fas fa-check"></i> Dachbeschichtung vorbereiten</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fassadenreinigung -->
+                <div class="service-card" data-service="fassadenreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/fassadenreinigung.svg" alt="Fassadenreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Fassadenreinigung</h3>
+                        <p>Gründliche Reinigung aller Fassadenmaterialien inklusive Graffiti-Entfernung.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Putz, Klinker, Beton</li>
+                            <li><i class="fas fa-check"></i> Holz & Metall</li>
+                            <li><i class="fas fa-check"></i> Graffiti & Algen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Terrassenreinigung -->
+                <div class="service-card" data-service="terrassenreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/terrassenreinigung.svg" alt="Terrassenreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Terrassen- & Gehwegreinigung</h3>
+                        <p>Professionelle Reinigung von Terrassen, Wegen und Plätzen aller Art.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Pflaster & Beton</li>
+                            <li><i class="fas fa-check"></i> Holzterrassen</li>
+                            <li><i class="fas fa-check"></i> Moos & Unkraut</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hofreinigung -->
+                <div class="service-card" data-service="hofreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/hofreinigung.svg" alt="Hofreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hof- & Garagenreinigung</h3>
+                        <p>Gründliche Reinigung von Parkplätzen, Einfahrten und Garagen.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Parkplätze & Einfahrten</li>
+                            <li><i class="fas fa-check"></i> Reifenspuren entfernen</li>
+                            <li><i class="fas fa-check"></i> Öl & Schmutz beseitigen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Maschinenreinigung -->
+                <div class="service-card" data-service="maschinenreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/maschinenreinigung.svg" alt="Maschinenreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Maschinen- & Fahrzeugreinigung</h3>
+                        <p>Professionelle Reinigung von Bau- und Landmaschinen, LKW und Containern.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Bau- & Landmaschinen</li>
+                            <li><i class="fas fa-check"></i> LKW & Container</li>
+                            <li><i class="fas fa-check"></i> Gründliche Reinigung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Graffitientfernung -->
+                <div class="service-card" data-service="graffitientfernung">
+                    <div class="service-image">
+                        <img src="assets/services/graffitientfernung.svg" alt="Graffitientfernung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Graffitientfernung</h3>
+                        <p>Professionelle Entfernung von Graffiti auf allen Oberflächen.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Beton & Putz</li>
+                            <li><i class="fas fa-check"></i> Metall & Holz</li>
+                            <li><i class="fas fa-check"></i> Spezielle Zusatzmittel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Zaunreinigung -->
+                <div class="service-card" data-service="zaunreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/zaunreinigung.svg" alt="Zaunreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-fence"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Zaun- & Gartenelemente</h3>
+                        <p>Reinigung von Zäunen und Gartenelementen aus verschiedenen Materialien.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Holz, Stein & Metall</li>
+                            <li><i class="fas fa-check"></i> Farbe entfernen</li>
+                            <li><i class="fas fa-check"></i> Algen beseitigen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bauendreinigung -->
+                <div class="service-card" data-service="bauendreinigung">
+                    <div class="service-image">
+                        <img src="assets/services/bauendreinigung.svg" alt="Bauendreinigung Münster">
+                        <div class="service-overlay">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Bauendreinigung</h3>
+                        <p>Vollständige Reinigung nach Bauarbeiten - innen und außen.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Innen & Außen</li>
+                            <li><i class="fas fa-check"></i> Bauschmutz entfernen</li>
+                            <li><i class="fas fa-check"></i> Zementschleier & Farbreste</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Über Münster Reinigung</h2>
+                    <p>Seit über 10 Jahren sind wir Ihr zuverlässiger Partner für alle Reinigungsarbeiten in Münster und Umgebung. Unser erfahrenes Team bietet professionelle Lösungen für private und gewerbliche Kunden.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Lokales Team</h4>
+                                <p>Keine Subunternehmer - nur erfahrene Fachkräfte aus Münster</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Umweltfreundlich</h4>
+                                <p>Verwendung umweltverträglicher Reinigungsmittel</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Vollversichert</h4>
+                                <p>Umfassender Versicherungsschutz für Ihre Sicherheit</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>Festpreisgarantie</h4>
+                                <p>Transparente Preise ohne versteckte Kosten</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/about-team.svg" alt="Unser Team bei der Arbeit">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kundenbewertungen</h2>
+                <p class="section-subtitle">Das sagen unsere zufriedenen Kunden</p>
+            </div>
+            
+            <div class="reviews-slider" id="reviews-slider">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Hervorragende Dachreinigung! Das Team war pünktlich, professionell und hat eine saubere Arbeit abgeliefert. Sehr empfehlenswert!"</p>
+                    <div class="review-author">
+                        <img src="assets/reviews/customer1.svg" alt="Kunde 1">
+                        <div>
+                            <h4>Michael Schmidt</h4>
+                            <span>Privathaushalt, Münster</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Express-Termin in 48h war möglich! Fassadenreinigung war perfekt, das Gebäude sieht wie neu aus. Danke!"</p>
+                    <div class="review-author">
+                        <img src="assets/reviews/customer2.svg" alt="Kunde 2">
+                        <div>
+                            <h4>Sarah Müller</h4>
+                            <span>Geschäftsführerin, Münster</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Professionelle Graffitientfernung an unserem Geschäft. Schnell, gründlich und zuverlässig. Gerne wieder!"</p>
+                    <div class="review-author">
+                        <img src="assets/reviews/customer3.svg" alt="Kunde 3">
+                        <div>
+                            <h4>Thomas Weber</h4>
+                            <span>Einzelhändler, Münster</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Bauendreinigung war perfekt organisiert. Das Team hat alles gründlich gereinigt und war sehr zuverlässig."</p>
+                    <div class="review-author">
+                        <img src="assets/reviews/customer4.svg" alt="Kunde 4">
+                        <div>
+                            <h4>Lisa Hoffmann</h4>
+                            <span>Bauherrin, Münster</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reviews-nav">
+                <button class="review-nav-btn" id="prev-review">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="review-dots" id="review-dots"></div>
+                <button class="review-nav-btn" id="next-review">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Häufig gestellte Fragen</h2>
+                <p class="section-subtitle">Antworten auf die wichtigsten Fragen</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Wie schnell können Sie einen Termin anbieten?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir bieten Express-Termine innerhalb von 48 Stunden an. Für reguläre Termine planen wir gerne mit Ihnen einen passenden Zeitpunkt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Welche Gebiete bedienen Sie?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir sind in Münster (PLZ 48167) und im gesamten Münsterland tätig. Bei größeren Projekten auch darüber hinaus.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Arbeiten Sie mit Subunternehmern?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nein, wir arbeiten ausschließlich mit unserem eigenen, erfahrenen Team. Das garantiert Qualität und Zuverlässigkeit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Welche Reinigungsmittel verwenden Sie?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir verwenden umweltverträgliche Reinigungsmittel, die sowohl effektiv als auch schonend für die Oberflächen sind.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bieten Sie eine Garantie?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, wir bieten eine Qualitätsgarantie auf alle unsere Arbeiten. Sollten Sie nicht zufrieden sein, kommen wir gerne nach.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Wie läuft die Preisgestaltung ab?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir bieten eine kostenlose Vor-Ort-Besichtigung mit Festpreisangebot. Keine versteckten Kosten, transparente Abrechnung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kontakt</h2>
+                <p class="section-subtitle">Lassen Sie uns über Ihr Projekt sprechen</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Musterstraße 123<br>48167 Münster</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+49123456789">0123 456789</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/49123456789">0123 456789</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-Mail</h4>
+                            <p><a href="mailto:info@muenster-reinigung.de">info@muenster-reinigung.de</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Öffnungszeiten</h4>
+                            <p>Mo-Fr: 7:00 - 18:00 Uhr<br>Sa: 8:00 - 14:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Dienstleistung</label>
+                            <select id="service" name="service">
+                                <option value="">Bitte wählen</option>
+                                <option value="dachreinigung">Dachreinigung</option>
+                                <option value="fassadenreinigung">Fassadenreinigung</option>
+                                <option value="terrassenreinigung">Terrassenreinigung</option>
+                                <option value="hofreinigung">Hofreinigung</option>
+                                <option value="maschinenreinigung">Maschinenreinigung</option>
+                                <option value="graffitientfernung">Graffitientfernung</option>
+                                <option value="zaunreinigung">Zaunreinigung</option>
+                                <option value="bauendreinigung">Bauendreinigung</option>
+                                <option value="sonstiges">Sonstiges</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Beschreiben Sie Ihr Projekt..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">
+                                Ich akzeptiere die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> *
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Nachricht senden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Unser Servicegebiet</h2>
+                <p class="section-subtitle">Münster und Umgebung</p>
+            </div>
+            <div id="map" class="map"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Münster Reinigung Logo">
+                        <span>Münster Reinigung</span>
+                    </div>
+                    <p>Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen in Münster und Umgebung.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Dienstleistungen</h4>
+                    <ul>
+                        <li><a href="#services">Dachreinigung</a></li>
+                        <li><a href="#services">Fassadenreinigung</a></li>
+                        <li><a href="#services">Terrassenreinigung</a></li>
+                        <li><a href="#services">Graffitientfernung</a></li>
+                        <li><a href="#services">Bauendreinigung</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Musterstraße 123, 48167 Münster</li>
+                        <li><i class="fas fa-phone"></i> 0123 456789</li>
+                        <li><i class="fas fa-envelope"></i> info@muenster-reinigung.de</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Münster Reinigung. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

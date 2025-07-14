@@ -1,0 +1,44 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- House -->
+  <rect x="100" y="150" width="200" height="120" fill="url(#roofGradient)"/>
+  
+  <!-- Roof -->
+  <polygon points="80,150 220,80 320,150" fill="#475569"/>
+  
+  <!-- Roof tiles -->
+  <g stroke="#64748b" stroke-width="1" fill="none">
+    <line x1="90" y1="140" x2="310" y2="140"/>
+    <line x1="100" y1="130" x2="300" y2="130"/>
+    <line x1="110" y1="120" x2="290" y2="120"/>
+    <line x1="120" y1="110" x2="280" y2="110"/>
+    <line x1="130" y1="100" x2="270" y2="100"/>
+    <line x1="140" y1="90" x2="260" y2="90"/>
+  </g>
+  
+  <!-- Door -->
+  <rect x="180" y="200" width="40" height="70" fill="#64748b"/>
+  
+  <!-- Windows -->
+  <rect x="120" y="170" width="30" height="30" fill="#94a3b8"/>
+  <rect x="250" y="170" width="30" height="30" fill="#94a3b8"/>
+  
+  <!-- Cleaning effect -->
+  <g opacity="0.7">
+    <circle cx="150" cy="100" r="3" fill="#2563eb"/>
+    <circle cx="250" cy="90" r="2" fill="#10b981"/>
+    <circle cx="200" cy="110" r="2" fill="#f59e0b"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#f8fafc">Dachreinigung</text>
+</svg>
