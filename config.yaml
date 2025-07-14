@@ -1,0 +1,88 @@
+# Super-KI-Agent Configuration
+agent:
+  name: "Super-KI-Agent"
+  version: "1.0.0"
+  auto_approval_threshold: 0.95  # Auto-approve if confidence > 95%
+  max_retries: 3
+  timeout_seconds: 30
+  batch_size: 10
+
+# Email Configuration
+email:
+  imap:
+    server: "imap.gmail.com"
+    port: 993
+    use_ssl: true
+    folder: "INBOX"
+    check_interval: 60  # seconds
+  
+  smtp:
+    server: "smtp.gmail.com"
+    port: 587
+    use_tls: true
+  
+  processing:
+    max_email_size: 10485760  # 10MB
+    supported_languages: ["de", "en", "fr", "es", "it"]
+    auto_translate: true
+    priority_keywords: ["urgent", "wichtig", "dringend", "asap"]
+
+# AI Configuration
+ai:
+  model: "gpt-4o"
+  max_tokens: 2000
+  temperature: 0.7
+  system_prompt: |
+    Du bist ein professioneller E-Mail-Assistent. Analysiere E-Mails und erstelle 
+    angemessene, höfliche und hilfreiche Antworten. Berücksichtige den Kontext, 
+    Ton und die Stimmung der ursprünglichen E-Mail.
+  
+  analysis_prompts:
+    sentiment: "Analysiere die Stimmung und den Ton dieser E-Mail (positiv/neutral/negativ)."
+    category: "Kategorisiere diese E-Mail (Anfrage/Beschwerde/Bestellung/Support/Andere)."
+    urgency: "Bewerte die Dringlichkeit dieser E-Mail (niedrig/mittel/hoch)."
+    language: "Erkenne die Sprache dieser E-Mail."
+
+# Telegram Configuration
+telegram:
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+  chat_id: "${TELEGRAM_CHAT_ID}"
+  approval_timeout: 300  # 5 minutes
+  notification_settings:
+    send_summary: true
+    include_confidence: true
+    include_analysis: true
+
+# Decision Engine
+decision_engine:
+  confidence_levels:
+    low: 0.0
+    medium: 0.6
+    high: 0.85
+    very_high: 0.95
+  
+  auto_actions:
+    very_high_confidence: "auto_approve"
+    high_confidence: "send_for_approval"
+    medium_confidence: "send_for_approval_with_suggestions"
+    low_confidence: "require_manual_review"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/super_agent.log"
+  max_size: "10MB"
+  backup_count: 5
+
+# Monitoring
+monitoring:
+  enabled: true
+  metrics_port: 9090
+  health_check_interval: 30
+
+# Security
+security:
+  encrypt_sensitive_data: true
+  max_login_attempts: 3
+  session_timeout: 3600
