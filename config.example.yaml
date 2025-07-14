@@ -1,0 +1,96 @@
+# E-Mail-Agent Beispiel-Konfiguration
+# Kopieren Sie diese Datei zu config.yaml und passen Sie die Werte an
+
+email:
+  # IMAP Einstellungen für E-Mail-Empfang
+  imap:
+    server: "imap.gmail.com"          # IMAP-Server (Gmail, Outlook, Web.de, etc.)
+    port: 993                         # IMAP-Port (meist 993 für SSL)
+    username: "ihre-email@gmail.com"  # Ihre E-Mail-Adresse
+    password: "ihr-app-passwort"      # App-Passwort (nicht normales Passwort!)
+  
+  # SMTP Einstellungen für E-Mail-Versand
+  smtp:
+    server: "smtp.gmail.com"          # SMTP-Server
+    port: 587                         # SMTP-Port (meist 587 für TLS)
+    username: "ihre-email@gmail.com"  # Ihre E-Mail-Adresse
+    password: "ihr-app-passwort"      # App-Passwort (nicht normales Passwort!)
+    use_tls: true                     # TLS verwenden (empfohlen)
+
+# Telegram Bot Konfiguration
+telegram:
+  bot_token: "1234567890:ABCdefGHIjklMNOpqrsTUVwxyz"  # Bot-Token von @BotFather
+  user_id: "123456789"                                 # Ihre Telegram-User-ID
+  timeout_minutes: 30                                  # Timeout für Antworten
+
+# OpenAI Konfiguration für KI-Antworten
+openai:
+  api_key: "sk-1234567890abcdefghijklmnopqrstuvwxyz"  # OpenAI API-Key
+  model: "gpt-4o-mini"                                 # Modell (gpt-4o-mini oder gpt-4o)
+  max_tokens: 1000                                     # Maximale Token pro Antwort
+  temperature: 0.7                                     # Kreativität (0.0-1.0)
+
+# Agent Einstellungen
+agent:
+  check_interval_minutes: 5                            # Prüfintervall in Minuten
+  max_emails_per_cycle: 1                              # Max. E-Mails pro Durchlauf
+  log_level: "INFO"                                    # Logging-Level (DEBUG, INFO, WARNING, ERROR)
+  log_file: "email_agent.log"                          # Log-Datei
+
+# Antwort-Templates für Telegram
+templates:
+  telegram_notification: |
+    📧 Neue E-Mail erhalten
+    
+    Von: {sender}
+    Betreff: {subject}
+    
+    Inhalt:
+    {content_preview}
+    
+    Generierte Antwort:
+    {generated_response}
+    
+    Antworten Sie mit "JA" um die E-Mail zu senden oder "NEIN" um abzubrechen.
+
+# Beispiel-Konfigurationen für andere E-Mail-Anbieter:
+
+# Outlook/Hotmail:
+# email:
+#   imap:
+#     server: "outlook.office365.com"
+#     port: 993
+#   smtp:
+#     server: "smtp-mail.outlook.com"
+#     port: 587
+#     use_tls: true
+
+# Web.de:
+# email:
+#   imap:
+#     server: "imap.web.de"
+#     port: 993
+#   smtp:
+#     server: "smtp.web.de"
+#     port: 587
+#     use_tls: true
+
+# GMX:
+# email:
+#   imap:
+#     server: "imap.gmx.net"
+#     port: 993
+#   smtp:
+#     server: "mail.gmx.net"
+#     port: 587
+#     use_tls: true
+
+# Yahoo:
+# email:
+#   imap:
+#     server: "imap.mail.yahoo.com"
+#     port: 993
+#   smtp:
+#     server: "smtp.mail.yahoo.com"
+#     port: 587
+#     use_tls: true
